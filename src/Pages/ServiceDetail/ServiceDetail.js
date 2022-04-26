@@ -5,7 +5,7 @@ const ServiceDetail = () => {
     const { serviceId } = useParams();
     const [service,setService] = useState({});
 
-    fetch(`http://localhost:5000/service/${serviceId}`)
+    fetch(`https://warm-cliffs-38517.herokuapp.com/service/${serviceId}`)
     .then(res => res.json())
     .then(data => setService(data))
 

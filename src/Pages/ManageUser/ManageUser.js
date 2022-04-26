@@ -9,7 +9,7 @@ const ManageUser = () => {
         console.log(id);
         const procced = window.confirm(`Are you sure you want delete this user`);
         if (procced) {
-            fetch(`http://localhost:5000/service/${id}`, {
+            fetch(`https://warm-cliffs-38517.herokuapp.com/service/${id}`, {
                 method: 'DELETE',
             })
             .then(res => res.json())

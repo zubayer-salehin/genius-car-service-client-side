@@ -12,7 +12,7 @@ const Checkout = () => {
     const [user] = useAuthState(auth);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/service/${serviceId}`)
+        fetch(`https://warm-cliffs-38517.herokuapp.com/service/${serviceId}`)
             .then(res => res.json())
             .then(data => setService(data))
     }, [serviceId])
@@ -27,7 +27,7 @@ const Checkout = () => {
             phone: e.target.phone.value
         }
 
-        axios.post('http://localhost:5000/order', order)
+        axios.post('https://warm-cliffs-38517.herokuapp.com/order', order)
             .then(response => {
                 const { data } = response;
                 if (data.insertedId) {
